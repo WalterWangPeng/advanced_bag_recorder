@@ -1,0 +1,128 @@
+# 每个 bag 的时长，单位秒
+split_time: 60.0
+
+# 每个文件夹最多保留多少个 bag 文件
+max_bags: 60
+
+# 文件夹最大数量，超过则循环删除最老文件夹
+max_folders: 3
+
+# 剩余磁盘空间低于多少 G 就停止录制
+min_free_space_gb: 2.0
+
+# costmap 特殊处理
+costmap_topic: "/decision_planning/mower_mission/obs_costmap"
+costmap_output_topic: "/compressed_costmap"
+costmap_save_rate: 1.0      # 每秒最多保存多少张 costmap
+costmap_jpeg_quality: 80    # JPEG 压缩质量 0-100
+
+# 普通话题（要录制的话题）
+normal_topics:
+  - "/decision_planning/mower_mission/coverage_global_path"
+  - "/decision_planning/mower_mission/coverage_local_path"
+  - "/decision_planning/mower_mission/coverage_local_traj"
+  - "/decision_planning/debug_text"
+  - "/decision_planning/debug_only_value"
+  - "/decision_planning/mower_mission/local_path_marker"
+  - "/decision_planning/mower_mission/local_traj_marker"
+  - "/decision_planning/mower_mission/pp_ld_point"
+  - "/decision_planning/mower_mission/pp_nearest_point"
+  - "/decision_planning/mower_mission/mission_status"
+  - "/flbot/task_coverage/mission_status"
+  - "/move_base/TebLocalPlannerROS/local_plan"
+  - "/decision_planning/mower_mission/zone_polygon"
+  - "/decision_planning/mower_mission/robot_footprint"
+  - "/task_coverage/debug_text"
+  - "/flbot/perception/obstacle_map_accu"
+  - "/flbot/perception/world_cloud"
+  - "/flbot/task_console/coverage_mission"
+  - "/flbot/task_console/coverage_ctrl"
+  - "/flbot/hardware/chassic_data"
+  - "/tf"
+  - "/tf_static"
+  - "/map"
+  - "/move_base/global_costmap/costmap"
+  - "/move_base/local_costmap/costmap"
+  - "/move_base/local_costmap/footprint"
+  - "/move_base/NavfnROS/plan"
+  - "/cmd_vel"
+  - "/robot_status"
+  - "/Odometry_lidar_in_map"
+  - "/Odometry_lidar_in_map_filter"
+  - "/MachineParameters"
+  - "/hardware_speed_ctl"
+  - "/flbot/localization_module/module_status"
+  - "/flbot/localization_module/log_info"
+  - "/flbot/localization_module/heartbeat"
+  - "/BreakTroubleNode/state"
+  - "/BreakTroubleNode/call_break_trouble"
+  - "/BreakTroubleNode/call_break_trouble_on_path"
+  - "/BreakTroubleNode/global_path"
+  - "/BreakTroubleNode/ref_path"
+  - "/BreakTroubleNode/map/layered_grid_map"
+  - "/BreakTroubleNode/motion_break_bumper/markers"
+  - "/BreakTroubleNode/pp_controller/carrot_pose"
+  - "/BreakTroubleNode/pp_controller/local_trajectory"
+  - "/task_monitor/robot_state"
+  - "/clock"
+  - "/flbot/task_console/max_vel"
+  - "/decision_planning/teb_local_planner/global_plan"
+  - "/decision_planning/teb_local_planner/local_plan"
+  - "/decision_planning/teb_local_planner/teb_poses"
+
+# 每个话题的最大消息数，-1 表示不限制
+topic_max_msgs:
+  "/decision_planning/mower_mission/coverage_global_path": -1
+  "/decision_planning/mower_mission/coverage_local_path": -1
+  "/decision_planning/mower_mission/coverage_local_traj": -1
+  "/decision_planning/debug_text": -1
+  "/decision_planning/debug_only_value": -1
+  "/decision_planning/mower_mission/local_path_marker": -1
+  "/decision_planning/mower_mission/local_traj_marker": -1
+  "/decision_planning/mower_mission/pp_ld_point": -1
+  "/decision_planning/mower_mission/mission_status": -1
+  "/flbot/task_coverage/mission_status": -1
+  "/move_base/TebLocalPlannerROS/local_plan": -1
+  "/decision_planning/mower_mission/zone_polygon": -1
+  "/decision_planning/mower_mission/robot_footprint": -1
+  "/task_coverage/debug_text": -1
+  "/flbot/perception/obstacle_map_accu": -1
+  "/flbot/perception/world_cloud": -1
+  "/flbot/task_console/coverage_mission": -1
+  "/flbot/task_console/coverage_ctrl": -1
+  "/flbot/hardware/chassic_data": -1
+  "/tf": -1
+  "/tf_static": -1
+  "/map": -1
+  "/move_base/global_costmap/costmap": -1
+  "/move_base/local_costmap/costmap": -1
+  "/move_base/local_costmap/footprint": -1
+  "/move_base/NavfnROS/plan": -1
+  "/cmd_vel": -1
+  "/robot_status": -1
+  "/Odometry_lidar_in_map": -1
+  "/Odometry_lidar_in_map_filter": -1
+  "/MachineParameters": -1
+  "/hardware_speed_ctl": -1
+  "/flbot/localization_module/module_status": -1
+  "/flbot/localization_module/log_info": -1
+  "/flbot/localization_module/heartbeat": -1
+  "/BreakTroubleNode/state": -1
+  "/BreakTroubleNode/call_break_trouble": -1
+  "/BreakTroubleNode/call_break_trouble_on_path": -1
+  "/BreakTroubleNode/global_path": -1
+  "/BreakTroubleNode/ref_path": -1
+  "/BreakTroubleNode/map/layered_grid_map": -1
+  "/BreakTroubleNode/motion_break_bumper/markers": -1
+  "/BreakTroubleNode/pp_controller/carrot_pose": -1
+  "/BreakTroubleNode/pp_controller/local_trajectory": -1
+  "/task_monitor/robot_state": -1
+  "/clock": -1
+  "/flbot/task_console/max_vel": -1
+  "/decision_planning/teb_local_planner/global_plan": -1
+  "/decision_planning/teb_local_planner/local_plan": -1
+  "/decision_planning/teb_local_planner/teb_poses": -1
+
+
+# 剩余磁盘空间低于多少 G 就停止录制
+min_free_space_gb: 2.0

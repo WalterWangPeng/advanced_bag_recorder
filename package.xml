@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>advanced_bag_recorder</name>
+  <version>0.1.0</version>
+  <description>Advanced ROS bag recorder with costmap compression and disk space management</description>
+
+  <maintainer email="your_email@example.com">Your Name</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>roscpp</depend>
+  <depend>rosbag</depend>
+  <depend>std_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>cv_bridge</depend>
+  <depend>image_transport</depend>
+  <depend>topic_tools</depend>
+
+  <export></export>
+</package>
