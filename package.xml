@@ -16,6 +16,8 @@
   <depend>cv_bridge</depend>
   <depend>image_transport</depend>
   <depend>topic_tools</depend>
+  <depend>geometry_msgs</depend>
+  <depend>tf2_msgs</depend>
 
   <export></export>
 </package>

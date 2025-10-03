@@ -1,8 +1,10 @@
 <launch>
+    <env name="ROSCONSOLE_CONFIG_FILE" value="/$(find advanced_bag_recorder)/params/log4cxx_config.cfg"/>
     <!-- 启动节点 -->
-    <node pkg="advanced_bag_recorder" type="advanced_bag_recorder_node" name="advanced_bag_recorder" output="screen"/>
-    <!-- 先加载 yaml 参数 -->
-    <rosparam command="load" file="$(find advanced_bag_recorder)/params/bag_recorder_params.yaml"/>
-    <!-- 动态指定 bag 存放路径，使用 $HOME 环境变量 -->
-    <param name="bag_root_path" value="$(env HOME)/rosbags"/>
+    <node pkg="advanced_bag_recorder" type="advanced_bag_recorder_node" name="advanced_bag_recorder" output="screen">
+        <!-- 先加载 yaml 参数 -->
+        <rosparam command="load" file="$(find advanced_bag_recorder)/params/bag_recorder_params.yaml"/>
+        <!-- 动态指定 bag 存放路径，使用 $HOME 环境变量 -->
+        <param name="bag_root_path" value="$(env HOME)/.fyld_bag"/>
+    </node>
 </launch>
