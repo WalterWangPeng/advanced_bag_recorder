@@ -37,13 +37,14 @@ find_package(catkin REQUIRED COMPONENTS
   topic_tools
   geometry_msgs
   tf2_msgs
+  visualization_msgs
 )
 
 find_package(OpenCV REQUIRED)
 
 catkin_package(
   INCLUDE_DIRS include
-  CATKIN_DEPENDS roscpp rosbag std_msgs nav_msgs sensor_msgs cv_bridge topic_tools geometry_msgs tf2_msgs
+  CATKIN_DEPENDS roscpp rosbag std_msgs nav_msgs sensor_msgs cv_bridge topic_tools geometry_msgs tf2_msgs visualization_msgs
 )
 
 include_directories(

@@ -18,14 +18,17 @@ map_topic: "/map"
 global_costmal_topic: "/move_base/global_costmap/costmap"
 # tf_static 特殊处理
 tf_static_topic: "/tf_static"
+# local_path和local_path_marker 特殊处理
+local_path_topic: "/decision_planning/mower_mission/coverage_local_path"
+local_path_marker_topic: "/decision_planning/mower_mission/local_path_marker"
+
+
 # 普通话题（要录制的话题）
 normal_topics:
   - "/decision_planning/mower_mission/coverage_global_path"
-  - "/decision_planning/mower_mission/coverage_local_path"
   - "/decision_planning/mower_mission/coverage_local_traj"
   - "/decision_planning/debug_text"
   - "/decision_planning/debug_only_value"
-  - "/decision_planning/mower_mission/local_path_marker"
   - "/decision_planning/mower_mission/local_traj_marker"
   - "/decision_planning/mower_mission/pp_ld_point"
   - "/decision_planning/mower_mission/pp_nearest_point"
