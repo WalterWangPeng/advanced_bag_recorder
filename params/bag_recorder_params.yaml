@@ -1,11 +1,11 @@
 # 每个 bag 的时长，单位秒
 split_time: 60.0
 # 每个文件夹最多保留多少个 bag 文件
-max_bags: 60
+max_bags: 30
 # 文件夹最大数量，超过则循环删除最老文件夹
-max_folders: 3
+max_folders: 2
 # 剩余磁盘空间低于多少 G 就停止录制
-min_free_space_gb: 2.0
+min_free_space_gb: 5.0
 # costmap 特殊处理
 costmap_topic: "/decision_planning/mower_mission/obs_costmap"
 costmap_output_topic: "/decision_costmap_image"
